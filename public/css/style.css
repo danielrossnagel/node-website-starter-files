@@ -15,6 +15,8 @@ html {
 }
 
 *, *::before, *::after {
+  box-sizing: inherit;
+  /* [1] */
   margin: 0;
   padding: 0;
 }
@@ -22,6 +24,8 @@ html {
 /* FONTS
    ========================================================================== */
 body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  /* [2] */
 }
 
 /* Header
@@ -51,8 +55,11 @@ body {
    ========================================================================== */
 .person {
   text-align: center;
+  text-decoration: none;
+  color: #000000;
 }
 
+.person>* {
   margin-bottom: 5px;
 }
 
@@ -84,6 +91,7 @@ body {
   flex-direction: column;
 }
 
+.profile-details>* {
   margin-bottom: 20px;
 }
 
@@ -102,3 +110,4 @@ body {
   color: #FFFFFF;
   background-color: #659AF1;
   border-radius: 5px;
+}
